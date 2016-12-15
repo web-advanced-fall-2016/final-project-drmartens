@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Saved Designs</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+   <!--  <link rel="stylesheet" href="css/style.css"> -->
+  </head>
+
+<body>
+<div id ="link" onclick="refresh()"><a href="index.html">Create a Design</a></div>
+<div id = "currentPerson" style= "font-size:16pt">"See some cool designs!"</div>
+<button onclick="loadDesign()">Load Design</button>
+<!-- <button onclick="refresh()">Refresh</button>  
+ -->
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+<!--     <script src="js/reset.js"></script>
+ --> 
+
+<script>
+var baseURL = "http://localhost:8080";
+var person = document.getElementById("currentPerson");
+var savedItems = [];    
+
+function refresh() {
+    $.ajax({
+        method: "GET",
+        url: baseURL + `/refresh`
+    }).done(function(res) {
+        console.log("Refresh is " + res.message);
+
+    })
+}
+
+function testConnection() {
+    $.ajax({
+        method: "GET",
+        url: baseURL + `/test`
+    }).done(function(res) {
+        console.log("Test result is " + res.message);
+
+    })
+}
+
+function getPeople() {
+    $.ajax({
+        method: "GET",
+        url: baseURL + `/people`
+    }).done(function(res) {
+        console.log('Got the people');
+        console.log(res);
+        for (i = 0; i < res.length; i++) {
+            console.log(res[i]);
+            savedItems.push(res[i]);
+        }
+        // createList();
+    })
+};
+
+//Create the List Upon Load or Reload
+// function createList() {
+//     console.log("creatinglist...");
+//     var list = document.querySelector('ul');
+//     // var li = document.createElement('li');
+//     for (item of savedItems) {
+//         list.innerHTML += "<li id=' " + item.id + "'>" + "Name: " + item.name + " Email: " + item.email + "</li>";
+//     }
+// }
+
+
+function loadDesign() {
+    refresh();
+    console.log("loadingDesign");
+    $.ajax({
+        method: "GET",
+        url: baseURL + `/loadDesign`
+    }).done(function(res) {
+        console.log(res);
+           currentPerson.innerHTML = res.name;
+    })
+}
+
+// on page load
+$(function(){
+testConnection();
+getPeople();
+  });
+  
+
+</script>
+
+
+   

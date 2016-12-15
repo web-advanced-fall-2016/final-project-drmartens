@@ -1,0 +1,13 @@
+{
+  "name": "RemoteLED",
+  "description": "An application to program LED through web interface, and store results in a database. Another LED Matrix reflects database.",
+  "author": "|Dana Martens| <martd371@newschool.edu>",
+  "version": "0.0.1",
+  "dependencies": {
+    "serialport": "1.4.9",
+    "socket.io": "0.8.7",
+	"forever": "0.10.0"
+  },
+  "devDependencies": { },
+  "engine": "node >= 0.8.19"
+}
