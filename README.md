@@ -63,8 +63,8 @@ The arduino interprets this string, `{Row#: Col#: On/Off}`, and turns the correc
 
  
  
- ##### API Endpoints 
- The API endpoints are used for two purposes.
+##### API Endpoints 
+The API endpoints are used for two purposes.
 1. Save users information and designs to the local database attached to the server on Index page.
 2. Load and navigate through saved designs from other users on the Saved page. Designs will appear on the LED matrix, users name will appear on the site.
  
