@@ -1,5 +1,7 @@
 # D'Light 
-## Proof of Concept
+## Proof of Concept Prototype
+
+![D'Light screen shot](https://github.com/web-advanced-fall-2016/final-project-drmartens/blob/master/dLight.jpg)
 
 This project was created for my Web Advanced: Javascript class at Parsons School of Design.
 
@@ -24,6 +26,52 @@ For this first prototype, I decided to honor some of cryptography, encryption ro
  * 9 x 12 canvas
  * Gold spray paint
  * Assorted wires, circuits, parts from the electronics trash bin on D12 at Parsons
+ 
+### How to Run this Code
+Clone or download and unzip the contents of this folder onto your computer. 
+
+##### Set Up the LED Matrix
+For this project, I used an [buildable LED matrix kit](https://www.tindie.com/products/rajbex/easy-matrix-a-cascadable-led-matrix-module-kit/) from Tindie.com. It comes with a Max7219 chip, an integrated circuit board and necessary resistors, pins etc. 
+
+1. Assemble the LED matrix according to the [instructions](https://d3s5r33r268y59.cloudfront.net/datasheets/3519/2014-11-01-02-54-42/AssemblyInstructions_EasyMatrix_V1.0.pdf)
+2. Connect the LED Matrix to an Arduino Uno. 
+	+ pin 12 is connected to the DataIn 
+	+ pin 11 is connected to the CLK 
+	+ pin 10 is connected to LOAD 
+	+ 5v is connected to VCC
+	+ Ground is connected to Gnd
+
+
+##### Setup the Arduino
+Open the ledMatrixController.ino file using the Arduino IDE.
+Download and include the LEDControl library referenced below. 
+Compile the code and upload it to your Arduino Uno board.
+
+Plug your Arduino Uno into the Serial Port on your computer or Raspberry Pi (note if using a raspberry Pi, 'let' commands in javascript must all be changed to 'var' in order for it to work).
+
+Make sure the port you have your Arduino plugged into is the same port in the Server.js file. For my project the port was `/dev/tty.usbmodem1411`. 
+
+##### Setup & Run the Server
+Before trying to run the code, you must download the following dependencies from NPM using the `npm -install` command.
+
++ serialport
++ socket.io
++ express    
++ bodyParser
++ path
++ fs
+
+When all dependencies have been installed, navigate to the folder in terminal and type `node server.js` to start the server on `localhost:8080`.
+
+
+##### Access the Web Client to Create/See Saved Designs
+Open a web browser of your choice and navigate to 
+`http://localhost:8080`. This will bring you to the Index page of the website where you can program your LED Matrix. Click the cells on the table and make sure they turn red and that the correct LED is lighting up on your Matrix (you may have to rotate it clockwise or counterclockwise depending on your assembly).
+
+Type your name into the input box and click save when you are finished with your design. A confirmation pop-up will appear.
+
+Navigate to the Saved Designs page to see your design and load other users designs by clicking on the "next" button.
+
  
  
 ### Libraries, References & Styling
