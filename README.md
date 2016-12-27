@@ -1,5 +1,5 @@
 # D'Light 
-### Proof of Concept
+## Proof of Concept
 
 This project was created for my Web Advanced: Javascript class at Parsons School of Design.
 
@@ -26,7 +26,7 @@ For this first prototype, I decided to honor some of cryptography, encryption ro
  * Assorted wires, circuits, parts from the electronics trash bin on D12 at Parsons
  
  
- ### Libraries, References & Styling
+### Libraries, References & Styling
  Below are the the references, libraries, and examples I used for this project, sorted by the part of the client-server-database-electronic interface they were used for. 
 
 #### Arduino Libraries & Examples
