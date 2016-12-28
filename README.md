@@ -2,6 +2,7 @@
 ## Proof of Concept Prototype
 
 ![D'Light screen shot](https://github.com/web-advanced-fall-2016/final-project-drmartens/blob/master/dLight.jpg)
+[D'Light Video - Programming the LEDs](https://youtu.be/e2V3lTiWAFU)
 
 This project was created for my Web Advanced: Javascript class at Parsons School of Design.
 
