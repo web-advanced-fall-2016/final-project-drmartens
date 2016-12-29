@@ -152,8 +152,6 @@ The code for parsing the incoming data on the Arduino is a bit buggy and complic
 
 Also there is a mirroring issue going on which isn't code related, but I think is an issue between the library and the board used. I need to try rewiring the circuit so that this issue is fixed.
 
-Need to improve the overall interface for the site. The table works very well, but I need to do alot of design work down the road to make this a better experience for users.
-
 Need to use an online database for security and consistency. While writing a JSON file is great for small amounts of data, I will need to use a real database service to securely store information and payments from users in the future. 
 
 I tried redoing this project with Mongo.DB but had issues incorporating everything as I'm still learning Mongo's functionality. I decided to leave it off for this project since the websockets and serial communication were complicated enough during the busy finals period.
