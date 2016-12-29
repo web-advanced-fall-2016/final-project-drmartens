@@ -186,31 +186,66 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body {
-    margin: 0;
-    padding: 0;
-  }
+@import url('https://fonts.googleapis.com/css?family=VT323');
+@import 'https://fonts.googleapis.com/css?family=Black+Ops+One';
 
-  .video-feed {
-    width: 650px;
-    float: left;
-  }
+
+body {
+    width: 100%;
+    margin:10px 10% 10px 10%;
+    justify-content: center;
+    background-image: url("background.gif");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: 'VT323', monospace;
+    font-size: 16px;
+    position: absolute;
+}
+
+.all {
+  width:70%;
+  background: rgba(30,30,30,.8);
+  margin-top:5%;
+  margin-left:5%;
+  position: absolute;
+  justify-content: center;
+}
+
+.title{
+    font-size: 40px;
+    margin: 25px, 0px, 25px, 0px;
+    font-family: 'Black Ops One', cursive;
+    justify-content: space-between;
+    text-align: center;
+    color:#00CBCA;
+    width:100%;
+    position: relative;
+}
+
+.content {
+   width: 100%;
+    max-width: 800px;
+    display:flex;    
+    flex-flow: column;
+    margin: 10px 10% 10px 10%;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+}
+
 
   .table-control {
-    float: left;
-    margin-bottom: 15px;
+   color:white;
+    width: 20%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position:relative;
+    padding: 5px 15px 5px 0px;
+    margin: 5px 15px 5px 0px;
   }
 
-  .table-control h3 { 
-  font-size: 20px;
-  color: #888888;
-  text-align: left;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #ccc;
-  width: 200px;
-  }
   .table-control table {
   //  width: 600px;
   }
@@ -241,6 +276,114 @@ body {
   .table-control a.button.waiting {
     background: black;
   }
+
+ .save {
+    color:white;
+    width: 40%;
+    height: 200px;
+   display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position:relative;
+    padding: 5px 5px 0px 55px;
+    margin: 5px 5px 0px 25px;
+}
+
+  .save h1 {
+    font-weight: bold;
+    font-size: 25px;
+    color:#00CBCA;
+    padding:0px;
+  }
+
+  .load {
+    color:white;
+    width: 40%;
+   display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position:relative;
+    padding: 5px 5px 0px 55px;
+    margin: 5px 5px 0px 25px;
+}
+
+
+  #saveButton {
+    width:50px;
+    height:20px;
+    cursor: pointer;
+    display:block;
+    color:black;
+    margin: 10px 10% 10px 10%;
+    position: relative;
+    background-color: white;
+    border-radius: 1px 1px 1px 1px;
+    border-color: #00CBCA;
+    padding-left:20px;
+  }
+
+  #saveButton:hover {
+    background-color:black;
+    color:white;
+  }
+
+  #loadButton {
+    width:150px;
+    height:20px;
+    margin-top:15px;
+    cursor: pointer;
+    display:block;
+    color:black;
+    position: relative;
+    background-color: white;
+    border-radius: 1px 1px 1px 1px;
+    border-color: #00CBCA;
+    padding-left:20px;
+  }
+
+   #loadButton:hover {
+    background-color:black;
+    color:white;
+  }
+
+#myInput {
+  border-color: #00CBCA;
+  height:20px;
+}
+
+ #instructions { 
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 10px 10% 10px 10%;
+    color:white;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    text-align:center;
+}
+
+ .nav {
+   width: 100%;
+    max-width: 800px;
+    display:block;
+    margin: 30px 25% 10px 25%;
+    position: relative;
+    color:white;
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+ }
+
+ .nav a {
+  text-decoration: none;
+  color:#00CBCA; 
+  cursor: pointer;
+}
+
+ .nav a:hover{
+  color:white;
+ }
 
 
 /*

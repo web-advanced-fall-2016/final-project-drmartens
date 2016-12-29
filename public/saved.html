@@ -5,41 +5,34 @@
     <title>Saved Designs</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-   <!--  <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
 <body>
-<div id ="link" onclick="refresh()"><a href="index.html">Create a Design</a></div>
-<div id = "currentPerson" style= "font-size:16pt">"See some cool designs!"</div>
-<button onclick="loadDesign()">Load Design</button>
-<!-- <button onclick="refresh()">Refresh</button>  
- -->
+<div class = 'all'>
+<div class ='title'>Saved Designs</div>
+<div class = 'content'>
+<div class = 'load' id = "currentPerson" style= "font-size:16pt">"See some cool designs!"</div>
+<div id = 'loadButton' onclick="loadDesign()">Load Design</div>
+</div>
+<div class ="nav" onclick="refresh()">Create a <a href="index.html">New Design</a></div>
+</div>
 </body>
 
+<!--Linked Scripts-->
 <script src="/socket.io/socket.io.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
-<!--     <script src="js/reset.js"></script>
- --> 
 
+<!--In Page Scripting -->
 <script>
 var baseURL = "http://localhost:8080";
 var person = document.getElementById("currentPerson");
 var savedItems = [];    
 
-function refresh() {
-    $.ajax({
-        method: "GET",
-        url: baseURL + `/refresh`
-    }).done(function(res) {
-        console.log("Refresh is " + res.message);
+//API Calls
 
-    })
-}
-
+//Test the Connection
 function testConnection() {
     $.ajax({
         method: "GET",
@@ -50,6 +43,7 @@ function testConnection() {
     })
 }
 
+//Get Saved Designs & People from Database
 function getPeople() {
     $.ajax({
         method: "GET",
@@ -61,21 +55,21 @@ function getPeople() {
             console.log(res[i]);
             savedItems.push(res[i]);
         }
-        // createList();
     })
 };
 
-//Create the List Upon Load or Reload
-// function createList() {
-//     console.log("creatinglist...");
-//     var list = document.querySelector('ul');
-//     // var li = document.createElement('li');
-//     for (item of savedItems) {
-//         list.innerHTML += "<li id=' " + item.id + "'>" + "Name: " + item.name + " Email: " + item.email + "</li>";
-//     }
-// }
+//Refresh the Page
+function refresh() {
+    $.ajax({
+        method: "GET",
+        url: baseURL + `/refresh`
+    }).done(function(res) {
+        console.log("Refresh is " + res.message);
 
+    })
+}
 
+//Load Next Design
 function loadDesign() {
     refresh();
     console.log("loadingDesign");
