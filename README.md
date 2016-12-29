@@ -4,7 +4,7 @@
 ![D'Light screen shot](https://github.com/web-advanced-fall-2016/final-project-drmartens/blob/master/dLight.jpg)
 
 
-[D'Light Prototype Video - Creting & Loading Designs](https://www.youtube.com/watch?v=CmKSsmvMHNY)
+[D'Light Prototype Video - Creating & Loading Designs](https://www.youtube.com/watch?v=CmKSsmvMHNY)
 
 This project was created for my Web Advanced: Javascript class at Parsons School of Design.
 
