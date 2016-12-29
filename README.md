@@ -1,8 +1,7 @@
 # D'Light 
 ## Proof of Concept Prototype
 
-<img src="https://github.com/web-advanced-fall-2016/final-project-drmartens/blob/master/dLight.jpg" width="500px">
-![D'Light screen shot](https://github.com/web-advanced-fall-2016/final-project-drmartens/blob/master/dLight.jpg)
+<img src="https://github.com/web-advanced-fall-2016/final-project-drmartens/blob/master/dLight.jpg" width="600px">
 ![D'Light Home Page](https://github.com/web-advanced-fall-2016/final-project-drmartens/blob/master/homepage.png)
 ![D'Light About](https://github.com/web-advanced-fall-2016/final-project-drmartens/blob/master/savedDesign.png)
 
