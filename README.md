@@ -1,7 +1,7 @@
 # D'Light 
 ## Proof of Concept Prototype
 
-![D'Light screen shot](https://github.com/web-advanced-fall-2016/final-project-drmartens/blob/master/dLight.jpg){:height="360px" width="360px"}.
+![D'Light screen shot](https://github.com/web-advanced-fall-2016/final-project-drmartens/blob/master/dLight.jpg)
 
 
 [D'Light Prototype Video - Creating & Loading Designs](https://www.youtube.com/watch?v=CmKSsmvMHNY)
